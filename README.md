@@ -11,3 +11,5 @@ Repository: https://github.com/ray-nguyen/ray-nguyen.github.io. GitHub Pages: pu
 Contact: FormSubmit delivers to raynguyen.marketer@gmail.com. The owner must activate the form from FormSubmit's confirmation email after the first submission on the live domain. Inbox delivery must then be tested. A successful response means FormSubmit accepted the message, not that delivery is confirmed. See https://formsubmit.co/documentation.
 
 Motion respects system preferences and can be paused. All résumé content remains accessible without WebGL or JavaScript.
+
+Résumé content was updated from Ray's October 2026 CV. The original PDF is published at https://ray-nguyen.github.io/Ray-Nguyen-Resume.pdf. The hero's “View my Resume” button opens it in a new tab; the contact section also provides a direct download link. Replace Ray-Nguyen-Resume.pdf in the repository and editable source when updating the CV.

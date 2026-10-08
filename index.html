@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#141513">
   <meta name="google-site-verification" content="xapDXyDVReKdOJS3hntlisRodAkaNnqLTSnWv5bE0uk">
   <title>Ray Nguyen — Marketing, with momentum.</title>
-  <meta name="description" content="Ray Nguyen is a marketing manager bringing together brand strategy, digital marketing and systems. Explore his experience across hospitality, disability services and finance.">
+  <meta name="description" content="Ray Nguyen is a marketing manager bringing together brand strategy, digital marketing and systems. Explore 7+ years of experience across hospitality, disability services, finance and B2B wholesale.">
   <meta property="og:title" content="Ray Nguyen — Marketing, with momentum.">
   <meta property="og:description" content="Brand thinking. Digital fluency. Connected customer experiences. Meet marketing manager Ray Nguyen.">
   <meta property="og:type" content="website">
@@ -33,6 +33,10 @@ h1,h2,h3,.email-link{overflow-wrap:anywhere}.line>span{max-width:100%}.experienc
 .about-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.section-label>span{min-width:0;overflow-wrap:anywhere}.about-number{flex-wrap:wrap}.proof-point{max-width:100%}.education-seal span{text-align:center;max-width:82%}
 @media(max-width:760px){.about-grid{grid-template-columns:minmax(0,1fr)}.proof-number{font-size:min(3.25rem,14vw)}.education-seal{width:min(10rem,90%);height:auto;aspect-ratio:1}.education-seal strong{font-size:min(1.3125rem,8vw)}}
 @media(max-width:480px){.chapter-indicator{display:none}}
+
+/* Resume access and the fourth experience chapter. */
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 30px;margin-top:27px}.hero-actions .text-link{margin-top:0;min-height:44px;justify-content:center}.resume-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:48px;padding:10px 22px;border:1px solid var(--copper);border-radius:32px;font-size:.875rem;font-weight:500;background:rgba(20,21,19,.7);transition:background .25s,color .25s}.resume-button:hover{background:var(--copper);color:var(--ink)}.mobile-mart{--copper:#d5b68d;background:linear-gradient(270deg,rgba(25,23,19,.97),rgba(25,23,19,.25) 58%,transparent)}
+@media(max-width:760px){.hero-actions{gap:16px 24px}.mobile-mart{background:linear-gradient(180deg,rgba(25,23,19,.98) 45%,rgba(25,23,19,.15) 74%,rgba(25,23,19,.88) 100%)}}
 </style>
   <script>/*!
  * GSAP 3.15.0
@@ -84,7 +88,7 @@ function initialiseReveals() {
   motionContext = gsap.context(() => {
     if (window.scrollY < 150) {
       gsap.from('.hero h1 .line > span', {yPercent:110, rotate:4, duration:1.35, stagger:.13, ease:'power4.out', clearProps:'transform'});
-      gsap.from('.intro-label, .hero-description, .text-link', {y:24, opacity:0, duration:1, stagger:.13, delay:.45, clearProps:'all'});
+      gsap.from('.intro-label, .hero-description, .hero-actions', {y:24, opacity:0, duration:1, stagger:.13, delay:.45, clearProps:'all'});
       gsap.from('.hero-top, .hero-bottom, .header', {opacity:0, duration:1.1, delay:.15, clearProps:'opacity'});
     }
     $$('.reveal').forEach((el) => {
@@ -223,7 +227,7 @@ async function createScene() {
     width=innerWidth;height=innerHeight;
     camera.aspect=width/height;camera.updateProjectionMatrix();
     renderer.setSize(width,height);renderer.setPixelRatio(Math.min(devicePixelRatio,width<760?1.4:1.65));
-    anchors=['home','experience','mobo','capital'].map((id,i)=>{
+    anchors=['home','experience','mobo','capital','mobile-mart'].map((id,i)=>{
       const section=document.getElementById(id);const rect=section.getBoundingClientRect();const art=section.querySelector('.experience-art');const artRect=art?.getBoundingClientRect();
       return {id,type:i===2?1:i===3?2:0,top:rect.top+scrollY,bottom:rect.bottom+scrollY,
         x:i===0?(width<760?width*.53:width*.79):artRect.left+artRect.width/2,
@@ -295,26 +299,29 @@ if(document.readyState==='complete')start();else addEventListener('load',start,{
     <section class="hero chapter" id="home" data-chapter="Introduction">
       <div class="hero-top eyebrow"><span>MARKETING MANAGER</span><span>ADELAIDE, AUSTRALIA</span></div>
       <div class="hero-content">
-        <p class="intro-label">Strategy meets creativity.</p>
+        <p class="intro-label">Growth & digital transformation.</p>
         <h1><span class="line"><span>Marketing,</span></span><span class="line"><span>with</span></span><span class="line"><span class="accent">momentum.</span></span></h1>
-        <p class="hero-description">I’m Ray Nguyen. I connect brands, people and technology<br class="desktop-break"> to turn good ideas into meaningful experiences.</p>
-        <a class="text-link" href="#experience">Explore my experience<span class="link-line" aria-hidden="true"></span></a>
+        <p class="hero-description">I’m Ray Nguyen. A marketing manager connecting brand strategy,<br class="desktop-break"> paid advertising and technology to support business growth.</p>
+        <div class="hero-actions"><a class="text-link" href="#experience">Explore my experience<span class="link-line" aria-hidden="true"></span></a><a class="resume-button" href="./Ray-Nguyen-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="View my Resume (PDF, opens in a new tab)">View my Resume <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="orbit-label" aria-hidden="true"><span>CREATIVE THINKING</span><span class="orbit-label-line"></span><span>CONNECTED EXECUTION</span></div>
-      <div class="hero-bottom"><a href="#about" class="scroll-cue"><span class="scroll-track" aria-hidden="true"><i></i></span>SCROLL TO DISCOVER</a><p><strong>8 years.</strong> A multidimensional perspective.</p><span class="folio">01 / 07</span></div>
+      <div class="hero-bottom"><a href="#about" class="scroll-cue"><span class="scroll-track" aria-hidden="true"><i></i></span>SCROLL TO DISCOVER</a><p><strong>7+ years.</strong> A multidimensional perspective.</p><span class="folio">01 / 08</span></div>
     </section>
 
     <section class="about light-section chapter" id="about" data-chapter="The approach">
       <div class="section-label"><span class="eyebrow">01 / THE APPROACH</span><span class="eyebrow">BRAND · DIGITAL · SYSTEMS</span></div>
       <h2 class="statement reveal">Good marketing<br>connects <em>everything.</em></h2>
       <div class="about-grid">
-        <div class="about-number reveal"><span>8</span><p>years of perspective.<br>Always moving forward.</p></div>
-        <div class="about-copy"><p class="large-copy reveal">From the first impression to the systems behind it, I bring the whole picture into focus.</p><p class="reveal">My experience spans brand strategy, digital marketing and systems development for SMEs, not-for-profits and corporate organisations across hospitality, disability services, finance and wholesale.</p><p class="reveal">I work at the intersection of creative ideas and practical delivery—connecting campaigns, customer experiences and the technology that makes them work.</p></div>
+        <div class="about-number reveal"><span>7+</span><p>years of perspective.<br>Always moving forward.</p></div>
+        <div class="about-copy"><p class="large-copy reveal">From the first impression to the systems behind it, I bring the whole picture into focus.</p><p class="reveal">I bring 7+ years of experience across hospitality, disability services, finance and B2B wholesale, including brand and local marketing across 28 restaurants and a $300,000 annual budget.</p><p class="reveal">My work combines campaign planning and execution with paid advertising, CRM automation, ecommerce and website development—connecting creative ideas with practical delivery.</p></div>
       </div>
       <div class="expertise-grid">
-        <div class="expertise reveal"><span>01</span><h3>Brand & creative</h3><p>Brand strategy · Adobe Creative Suite<br>Design & video · Integrated campaigns</p></div>
-        <div class="expertise reveal"><span>02</span><h3>Digital & performance</h3><p>Meta & Google Ads · Semrush<br>Web development · Power BI & SQL</p></div>
-        <div class="expertise reveal"><span>03</span><h3>Systems & experience</h3><p>CRM & email automation · UX<br>HubSpot · Dynamics 365 · ERP systems</p></div>
+        <div class="expertise reveal"><span>01</span><h3>Brand & multi-site marketing</h3><p>Brand strategy · Store launches · Franchisee support<br>OOH, print, press, radio & events · Adobe Creative Suite</p></div>
+        <div class="expertise reveal"><span>02</span><h3>Digital advertising</h3><p>Meta & Google Ads · Audience, keyword & geo-targeting<br>A/B testing · CPA optimisation · Meta Pixel & Conversions API</p></div>
+        <div class="expertise reveal"><span>03</span><h3>CRM & automation</h3><p>Customer databases · EDMs · Automated workflows<br>HubSpot · Dynamics 365 · Pipedrive · Mailchimp</p></div>
+        <div class="expertise reveal"><span>04</span><h3>Web & ecommerce</h3><p>WordPress · Wix · Shopify · WooCommerce<br>Website development · SEO · Semrush & Yoast</p></div>
+        <div class="expertise reveal"><span>05</span><h3>Systems & operations</h3><p>Odoo · Gecko · Inventory, loyalty & pricing<br>POS & ordering integrations · UI/UX design</p></div>
+        <div class="expertise reveal"><span>06</span><h3>Data & insights</h3><p>Power BI · Excel · SQL<br>Management reporting · Visualisations · Analysis</p></div>
       </div>
     </section>
 
@@ -325,12 +332,13 @@ if(document.readyState==='complete')start();else addEventListener('load',start,{
           <p class="eyebrow role reveal">MARKETING MANAGER <span> / ADELAIDE</span></p>
           <h2 class="company reveal">Bami<br><em>Vietnamese.</em></h2>
           <p class="experience-intro reveal">One brand. Every touchpoint.</p>
-          <p class="experience-summary reveal">Connecting brand, digital and in-store experiences across a growing hospitality franchise in South Australia and Victoria.</p>
+          <p class="experience-summary reveal">Reported to the CEO, managing brand strategy, promotions and franchise marketing across 28 stores in South Australia and Victoria.</p>
           <ul class="achievements">
-            <li class="reveal">Led brand strategy, store opening campaigns and franchisee marketing, alongside the rollout of packaging, uniforms and in-store materials.</li>
-            <li class="reveal">Managed an $80,000 mobile app project, from UI/UX and business analysis to vendor coordination.</li>
-            <li class="reveal">Led POS changes, delivery integrations and kiosk and table-ordering interface design.</li>
-            <li class="reveal">Implemented CRM automation and email campaigns for 22,000+ customers, with advertising across outdoor, print, radio and digital.</li>
+            <li class="reveal">Managed a $300,000 annual brand and local area marketing budget, supporting app downloads, store launches and seasonal promotions.</li>
+            <li class="reveal">Managed Meta Ads with store-level geo-targeting, A/B testing and CPA optimisation, using Meta Pixel and Conversions API for tracking. Ran Google SEM and Display campaigns with Semrush research, match types and negative keywords.</li>
+            <li class="reveal">Managed the $80,000 iOS and Android ordering app project with a Vietnam-based IT team, overseeing UI/UX, vendor outsourcing and business analysis. Migrated 5,000+ users and grew the user base to 12,000+.</li>
+            <li class="reveal">Led migration from SwiftPOS to Abacus and Lightspeed. Integrated Uber Eats, Menulog and DoorDash through Doshii, and designed kiosk and table-ordering interfaces.</li>
+            <li class="reveal">Built HubSpot workflows and email campaigns for 22,000+ customers. Coordinated shopping centres, agencies and media partners on OOH, print, radio and digital campaigns, plus packaging, uniforms and in-store materials.</li>
           </ul>
           <div class="skill-tags reveal"><span>Brand strategy</span><span>Customer experience</span><span>Digital transformation</span></div>
         </div>
@@ -341,17 +349,18 @@ if(document.readyState==='complete')start();else addEventListener('load',start,{
     <section class="experience mobo chapter" id="mobo" data-chapter="Mobo Group">
       <div class="section-label"><span class="eyebrow">03 / EXPERIENCE</span><span class="eyebrow">SEP 2021 — JUN 2023</span></div>
       <div class="experience-grid reverse">
-        <div class="experience-art"><div class="chapter-watermark" aria-hidden="true">02</div><div class="proof-point reveal"><span class="proof-number">12<span> sites</span></span><p>one connected marketing approach</p></div><div class="art-caption eyebrow">PURPOSE × PEOPLE × COMMUNITY</div></div>
+        <div class="experience-art"><div class="chapter-watermark" aria-hidden="true">02</div><div class="proof-point reveal"><span class="proof-number">6<span> sites</span></span><p>one connected marketing approach</p></div><div class="art-caption eyebrow">PURPOSE × PEOPLE × COMMUNITY</div></div>
         <div class="experience-copy">
           <p class="eyebrow role reveal">MARKETING MANAGER <span> / ADELAIDE</span></p>
           <h2 class="company reveal">Mobo<br><em>Group.</em></h2>
           <p class="experience-intro reveal">Making purpose visible.</p>
-          <p class="experience-summary reveal">Building awareness and generating enquiries for disability services, with local communities at the heart of every campaign.</p>
+          <p class="experience-summary reveal">Reported to the Board of Directors and CEO, leading the Marketing and Communications Plan across six sites to support strategic and operational objectives.</p>
           <ul class="achievements">
-            <li class="reveal">Oversaw marketing across 12 sites to connect people with disability to services and opportunities.</li>
-            <li class="reveal">Coordinated agencies on outdoor, newspaper and council advertising for seminars and consultations.</li>
-            <li class="reveal">Implemented marketing automation across Dynamics 365, Mailchimp and Square.</li>
-            <li class="reveal">Delivered local Disability Employment Services campaigns, reaching communities within 5 km of each site.</li>
+            <li class="reveal">Developed quarterly advertising, PR, event and expo plans, coordinating agencies to promote Disability Employment Services in local communities.</li>
+            <li class="reveal">Oversaw brand consistency across digital and printed materials, including collateral development, distribution and effectiveness.</li>
+            <li class="reveal">Managed the website, social media and communications calendar. Produced videos, case studies and promotional content for internal and external audiences.</li>
+            <li class="reveal">Managed EDM campaigns and automated workflows using Dynamics 365.</li>
+            <li class="reveal">Conducted market and brand-awareness research, monitored disability-sector developments and shared findings with the CEO and internal stakeholders.</li>
           </ul>
           <div class="skill-tags reveal"><span>Community marketing</span><span>CRM automation</span><span>Integrated campaigns</span></div>
         </div>
@@ -365,29 +374,50 @@ if(document.readyState==='complete')start();else addEventListener('load',start,{
           <p class="eyebrow role reveal">MARKETING SPECIALIST <span> / SYDNEY</span></p>
           <h2 class="company reveal">Barclay<br>Pearce <em>Capital.</em></h2>
           <p class="experience-intro reveal">Turning complexity into clarity.</p>
-          <p class="experience-summary reveal">Bringing financial stories to life through investor relations campaigns, digital platforms and paid media.</p>
+          <p class="experience-summary reveal">Reported to the CMO, delivering investor relations and marketing campaigns for the firm and its ASX-listed clients.</p>
           <ul class="achievements">
-            <li class="reveal">Worked with the CMO and Head of Marketing on investor relations campaigns for BPC and its ASX-listed clients.</li>
-            <li class="reveal">Planned and developed the digital platforms for Barclay Pearce Times.</li>
-            <li class="reveal">Executed paid digital campaigns to promote BPC and its clients.</li>
-            <li class="reveal">Developed websites for ASX-listed businesses across mining, consumer services and technology.</li>
+            <li class="reveal">Developed the Barclay Pearce Times website and designed websites for ASX-listed clients in mining, biotech, consumer services and technology.</li>
+            <li class="reveal">Executed digital campaigns for the firm and its clients, alongside SEO and SEM campaigns.</li>
+            <li class="reveal">Produced 26 content items across podcast episodes, videos and digital templates.</li>
+            <li class="reveal">Maintained database accuracy and managed EDM distribution through HubSpot.</li>
           </ul>
           <div class="skill-tags reveal"><span>Investor relations</span><span>Digital platforms</span><span>Paid media</span></div>
         </div>
-        <div class="experience-art"><div class="chapter-watermark" aria-hidden="true">03</div><div class="proof-point reveal"><span class="proof-number proof-word">Clarity.</span><p>across stories, platforms and campaigns</p></div><div class="art-caption eyebrow">STRATEGY × STORY × EXECUTION</div></div>
+        <div class="experience-art"><div class="chapter-watermark" aria-hidden="true">03</div><div class="proof-point reveal"><span class="proof-number">26<span> content items</span></span><p>podcast episodes, videos & digital templates</p></div><div class="art-caption eyebrow">STRATEGY × STORY × EXECUTION</div></div>
+      </div>
+    </section>
+
+    <section class="experience mobile-mart chapter" id="mobile-mart" data-chapter="Mobile Mart">
+      <div class="section-label"><span class="eyebrow">05 / EXPERIENCE</span><span class="eyebrow">MAR 2019 — MAY 2020</span></div>
+      <div class="experience-grid reverse">
+        <div class="experience-art"><div class="chapter-watermark" aria-hidden="true">04</div><div class="proof-point reveal"><span class="proof-number">230<span>%</span></span><p>increase in website visitors</p></div><div class="art-caption eyebrow">ECOMMERCE × SEARCH × GROWTH</div></div>
+        <div class="experience-copy">
+          <p class="eyebrow role reveal">MARKETING COORDINATOR <span> / SYDNEY</span></p>
+          <h2 class="company reveal">Mobile<br><em>Mart.</em></h2>
+          <p class="experience-intro reveal">Building a path to purchase.</p>
+          <p class="experience-summary reveal">Reported to the Sales Manager, coordinating ecommerce development, promotions and marketing automation for more than 2,000 ANZ wholesale and retail customers.</p>
+          <ul class="achievements">
+            <li class="reveal">Led the migration and development of the online store from Shopify to WooCommerce.</li>
+            <li class="reveal">Generated $80,000 in online sales through paid and owned channels.</li>
+            <li class="reveal">Increased website visitors by 230% and achieved consistent search positions of three to five for targeted keywords.</li>
+            <li class="reveal">Improved SEO visibility by 25% using Yoast and Semrush.</li>
+          </ul>
+          <div class="skill-tags reveal"><span>Ecommerce</span><span>SEO & SEM</span><span>Marketing automation</span></div>
+        </div>
       </div>
     </section>
 
     <section class="education light-section chapter" id="education" data-chapter="Education">
-      <div class="section-label"><span class="eyebrow">05 / THE FOUNDATION</span><span class="eyebrow">MAR 2017 — MAY 2020</span></div>
+      <div class="section-label"><span class="eyebrow">06 / THE FOUNDATION</span><span class="eyebrow">EDUCATION & QUALIFICATIONS</span></div>
       <div class="education-heading"><h2 class="statement reveal">Creative by nature.<br><em>Curious by design.</em></h2><span class="education-seal reveal" aria-label="Graduated with distinction"><span>GRADUATED WITH</span><strong>Distinction</strong><span>UNIVERSITY OF WOLLONGONG</span></span></div>
-      <div class="degree-grid"><p class="eyebrow reveal">EDUCATION</p><div><h3 class="degree-title reveal">Bachelor of Communications<br>and Media Studies</h3><p class="university reveal">University of Wollongong, Australia</p><div class="majors reveal"><span>Digital Media</span><span>Marketing & Advertising</span><span class="major-label">DOUBLE MAJOR</span></div></div></div>
+      <div class="degree-grid"><p class="eyebrow reveal">MAR 2017 — MAY 2020</p><div><h3 class="degree-title reveal">Bachelor of Communications<br>and Media Studies</h3><p class="university reveal">University of Wollongong, Australia</p><div class="majors reveal"><span>Digital Media</span><span>Marketing & Advertising</span><span class="major-label">DOUBLE MAJOR</span></div></div></div>
+      <div class="degree-grid"><p class="eyebrow reveal">FEB 2015 — JAN 2017</p><div><h3 class="degree-title reveal">Diploma of Information Technology</h3><p class="university reveal">FPT Polytechnic College, Vietnam</p><div class="majors reveal"><span>Web Development</span><span>UI/UX Design</span><span>Web Analytics & Security</span></div></div></div>
     </section>
 
     <section class="contact chapter" id="contact" data-chapter="Let’s connect">
-      <div class="section-label"><span class="eyebrow">06 / WHAT’S NEXT</span><span class="eyebrow">LET’S START A CONVERSATION</span></div>
+      <div class="section-label"><span class="eyebrow">07 / WHAT’S NEXT</span><span class="eyebrow">LET’S START A CONVERSATION</span></div>
       <div class="contact-grid">
-        <div class="contact-copy"><h2 class="contact-title reveal">Good things<br>start with<br><em>a hello.</em></h2><p class="reveal">Have a role, a challenge or an idea in mind?<br>I’d love to hear about it.</p><a class="email-link reveal" href="mailto:raynguyen.marketer@gmail.com">raynguyen.marketer@gmail.com</a><a class="social-link reveal" href="https://www.linkedin.com/in/raynguyenvn/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-copy"><h2 class="contact-title reveal">Good things<br>start with<br><em>a hello.</em></h2><p class="reveal">Have a role, a challenge or an idea in mind?<br>I’d love to hear about it.</p><a class="email-link reveal" href="mailto:raynguyen.marketer@gmail.com">raynguyen.marketer@gmail.com</a><a class="social-link reveal" href="./Ray-Nguyen-Resume.pdf" download="Ray-Nguyen-Resume.pdf">Download my Resume (PDF) <span aria-hidden="true">↓</span></a><a class="social-link reveal" href="https://www.linkedin.com/in/raynguyenvn/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
         <form id="contact-form" class="contact-form" action="https://formsubmit.co/raynguyen.marketer@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New enquiry — Ray Nguyen website"><input type="hidden" name="_template" value="table">
           <div class="honey" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="_honey" tabindex="-1" autocomplete="off"></div>
